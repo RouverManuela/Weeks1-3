@@ -20,5 +20,6 @@ public class chaser : MonoBehaviour
         worldMousePosition.z = 0f;
         transform.position = worldMousePosition;
 
+
     }
 }
