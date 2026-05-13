@@ -1,10 +1,13 @@
+using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class CodingGym1 : MonoBehaviour
 {
-    public float speed;
-     public float Max;
-    public float Min;
+    public float speedX;
+    public float speedY;
+    public Camera cameraa;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -15,38 +18,30 @@ public class CodingGym1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 newPosition = transform.position;
-        newPosition.x += speed;
-        newPosition.y += speed;
+        Vector2 newPosition = transform.position;
+        newPosition.x += speedX * Time.deltaTime;
+        newPosition.y += speedY * Time.deltaTime;
+        
+        Vector2 screenPosition = cameraa.WorldToScreenPoint(newPosition);
 
-        transform.position = newPosition;
-
-
-        if (newPosition > Max)
+        if (screenPosition.x > Screen.width)
         {
-
-            speed *= -1f;
-
+            speedX *= -1f;
+            Debug.Log(newPosition);
         }
-
-        if (newPosition.x < Min)
+        if (screenPosition.x < Screen.width - Screen.width)
         {
-            speed *= -1f;
-
+            speedX *= -1f;
         }
-
-        if (newPosition.y > Max)
+        if(screenPosition.y > Screen.height)
+        { 
+            speedY *= -1f;
+        }
+        if (screenPosition.y < Screen.height - Screen.height)
         {
-
-            speed *= -1f;
-
+            speedY *= -1f;
         }
-
-        if (newPosition.y < Min)
-        {
-            speed *= -1f;
-
-        }
+       transform.position = newPosition;
 
     }
 }
