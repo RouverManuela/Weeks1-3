@@ -242,8 +242,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Assignment1_Traffic
   speed: 3
+  stop: 0
   duration: 2
   resetPos: 6.79
+  mouseDistance: 1
   gameCamera: {fileID: 1459382170}
 --- !u!212 &2067253475
 SpriteRenderer:
