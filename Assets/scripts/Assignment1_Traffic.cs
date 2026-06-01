@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class Assignment1_Traffic : MonoBehaviour
 {
     //Speed and movement
-    public float MaxSpeed;
+    public float MaxSpeed;             
     public float MinSpeed;
     public float lerpSpeed;
     public float resetPos;
@@ -72,3 +72,12 @@ public class Assignment1_Traffic : MonoBehaviour
         transform.position = currentPosition;
     }
 }
+
+////////////////////////////////////////////////////////Inspector Values///////////////////////////////////////////////////////////////////
+///// Blue Car- MaxSpeed(3), MinSpeed(0), LerpSpeed(1.5), ResetPos(6.94), MouseDistance(2.5), MinShake(-0.81), MaxSpeed(-0.82), Duration(1)
+///// Red Car- MaxSpeed(4.5), MinSpeed(0), LerpSpeed(2), RestePos(7), MouseDistance(2.5), MinShake(0.32), MaxSpeed(0.33), Duration(1)
+///// Orange Car- MaxSpeed(4.5), MinSpeed(0), LerpSpeed(2), RestePos(7), MouseDistance(2.5), MinShake(1.2), MaxSpeed(1.21), Duration(1)
+///// Green Car- MaxSpeed(3.5), MinSpeed(0), LerpSpeed(2), RestePos(6.56), MouseDistance(-2.17), MinShake(-2.18), MaxSpeed(0.33), Duration(1)
+
+
+

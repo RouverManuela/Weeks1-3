@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+//**Referenced from "Chaser" as taught in class**
+
 public class StopSign_Cursor : MonoBehaviour
 {
     public Camera gameCamera;
@@ -16,6 +18,7 @@ public class StopSign_Cursor : MonoBehaviour
     {
         Vector3 currentMousePosition = Mouse.current.position.ReadValue();
 
+        //gets mouse psotion on screen
         Vector3 worldMousePosition = gameCamera.ScreenToWorldPoint(currentMousePosition);
         worldMousePosition.z = 0f;
         transform.position = worldMousePosition;
