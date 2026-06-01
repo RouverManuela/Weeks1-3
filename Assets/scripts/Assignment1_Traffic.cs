@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+//Sprites from: https://ivoryred.itch.io/pixel-cars?download
 public class Assignment1_Traffic : MonoBehaviour
 {
     //Speed and movement
